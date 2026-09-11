@@ -2,8 +2,8 @@
 #include <stdlib.h>
 #include <time.h>
 
-#define LARGURA_JANELA 800
-#define ALTURA_JANELA  600
+#define LARGURA 800
+#define ALTURA  600
 #define TAM_CELULA     40
 
 typedef struct {
