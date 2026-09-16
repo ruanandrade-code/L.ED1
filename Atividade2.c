@@ -77,8 +77,8 @@ Moeda *criarMoedas(int quantidade)
         Moeda *m = moedas + i;
 
         m->pos = (Vector2){
-            GetRandomValue(30, LARGURA_JANELA - 30),
-            GetRandomValue(30, ALTURA_JANELA - 30)
+            GetRandomValue(30, LARGURA - 30),
+            GetRandomValue(30, ALTURA - 30)
         };
 
         m->raio = 10.0f;
@@ -153,16 +153,16 @@ void desenharMoeda(const Moeda *m)
 void novaPosicaoMoeda(Moeda *m)
 {
     m->pos = (Vector2){
-        GetRandomValue(30, LARGURA_JANELA - 30),
-        GetRandomValue(30, ALTURA_JANELA - 30)
+        GetRandomValue(30, LARGURA - 30),
+        GetRandomValue(30, ALTURA - 30)
     };
 }
 
 int main(void)
 {
     InitWindow(
-        LARGURA_JANELA,
-        ALTURA_JANELA,
+        LARGURA,
+        ALTURA,
         "Atividade 2 - Moedas"
     );
 
@@ -179,8 +179,8 @@ int main(void)
     }
 
     Vector2 posJogador = {
-        LARGURA_JANELA / 2.0f,
-        ALTURA_JANELA / 2.0f
+        LARGURA / 2.0f,
+        ALTURA / 2.0f
     };
 
     float raioJogador = 15.0f;
@@ -284,7 +284,7 @@ int main(void)
         DrawText(
             "Bronze = 5 | Prata = 10 | Ouro = 25 | Diamante = 50",
             10,
-            ALTURA_JANELA - 30,
+            ALTURA - 30,
             18,
             DARKGRAY
         );
