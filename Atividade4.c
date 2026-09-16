@@ -23,10 +23,6 @@ typedef struct {
     EstadoInimigo estado;
 } Inimigo;
 
-
-/* -------------------------------------------------
-   Inicializa os inimigos
-   ------------------------------------------------- */
 void inicializarInimigos(Inimigo *vetor, int n)
 {
     Vector2 posicoes[] = {
@@ -48,10 +44,6 @@ void inicializarInimigos(Inimigo *vetor, int n)
     }
 }
 
-
-/* -------------------------------------------------
-   Aplica dano em um inimigo
-   ------------------------------------------------- */
 void atingirInimigo(Inimigo *inimigo, int dano)
 {
     if (inimigo == NULL ||
@@ -69,10 +61,6 @@ void atingirInimigo(Inimigo *inimigo, int dano)
     }
 }
 
-
-/* -------------------------------------------------
-   Encontra o inimigo vivo mais próximo
-   ------------------------------------------------- */
 Inimigo *encontrarInimigoMaisProximo(
     Inimigo *vetor,
     int n,
@@ -106,11 +94,6 @@ Inimigo *encontrarInimigoMaisProximo(
     return maisProximo;
 }
 
-
-/* -------------------------------------------------
-   EXERCÍCIO 1
-   Cura todos os inimigos vivos
-   ------------------------------------------------- */
 void curarTodos(Inimigo *vetor, int n, int cura)
 {
     for (int i = 0; i < n; i++)
