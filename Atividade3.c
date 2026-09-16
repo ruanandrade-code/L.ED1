@@ -2,8 +2,8 @@
 #include <stdlib.h>
 #include <stdbool.h>
 
-#define LARGURA_JANELA 800
-#define ALTURA_JANELA 600
+#define LARGURA 800
+#define ALTURA 600
 
 typedef struct
 {
@@ -68,8 +68,8 @@ Item *criarItens(int quantidade)
 
         it->pos = (Vector2)
         {
-            GetRandomValue(30, LARGURA_JANELA - 30),
-            GetRandomValue(30, ALTURA_JANELA - 30)
+            GetRandomValue(30, LARGURA - 30),
+            GetRandomValue(30, ALTURA - 30)
         };
 
         it->raio = 12.0f;
@@ -233,8 +233,8 @@ bool tentarColetar(
 int main(void)
 {
     InitWindow(
-        LARGURA_JANELA,
-        ALTURA_JANELA,
+        LARGURA,
+        ALTURA,
         "Atividade 3 - Union e Enum"
     );
 
@@ -254,8 +254,8 @@ int main(void)
 
     jogador.pos = (Vector2)
     {
-        LARGURA_JANELA / 2.0f,
-        ALTURA_JANELA / 2.0f
+        LARGURA / 2.0f,
+        ALTURA / 2.0f
     };
 
     jogador.raio = 15.0f;
@@ -295,10 +295,10 @@ int main(void)
         }
 
         if (jogador.pos.x >
-            LARGURA_JANELA - jogador.raio)
+            LARGURA - jogador.raio)
         {
             jogador.pos.x =
-                LARGURA_JANELA - jogador.raio;
+                LARGURA - jogador.raio;
         }
 
         if (jogador.pos.y < jogador.raio)
@@ -307,10 +307,10 @@ int main(void)
         }
 
         if (jogador.pos.y >
-            ALTURA_JANELA - jogador.raio)
+            ALTURA - jogador.raio)
         {
             jogador.pos.y =
-                ALTURA_JANELA - jogador.raio;
+                ALTURA - jogador.raio;
         }
 
         for (int i = 0; i < quantidadeItens; i++)
@@ -379,7 +379,7 @@ int main(void)
         DrawText(
             "Vermelho = Arma | Verde = Pocao | Roxo = Veneno | Azul = Escudo",
             10,
-            ALTURA_JANELA - 30,
+            ALTURA - 30,
             18,
             DARKGRAY
         );
